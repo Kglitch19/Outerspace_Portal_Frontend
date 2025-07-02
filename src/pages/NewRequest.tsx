@@ -1,21 +1,20 @@
-
 import { useState } from "react";
-import { Button } from "../../components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../../components/ui/card";
-import { Input } from "../../components/ui/input";
-import { Label } from "../../components/ui/label";
-import { Textarea } from "../../components/ui/textarea";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "../../components/ui/select";
+import { Button } from "../components/ui/button";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../components/ui/card";
+import { Input } from "../components/ui/input";
+import { Label } from "../components/ui/label";
+import { Textarea } from "../components/ui/textarea";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "../components/ui/select";
 import { Upload, FileText, DollarSign } from "lucide-react";
-import { useToast } from "@/hooks/use-toast";
-import Header from "../../components/Header";
-import Footer from "../../components/Footer";
+
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 const NewRequest = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [selectedType, setSelectedType] = useState("");
   const [estimatedPrice, setEstimatedPrice] = useState(0);
-  const { toast } = useToast();
+  // const { toast } = useToast();
 
   const designTypes = {
     "social-media": { name: "Social Media Post", price: 150 },
@@ -37,10 +36,7 @@ const NewRequest = () => {
     
     setTimeout(() => {
       setIsLoading(false);
-      toast({
-        title: "Request Submitted",
-        description: "Your design request has been submitted successfully. We'll review it and get back to you with a quote.",
-      });
+      alert("Your design request has been submitted successfully. We'll review it and get back to you with a quote.");
     }, 1000);
   };
 

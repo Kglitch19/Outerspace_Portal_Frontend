@@ -1,5 +1,4 @@
-
-import { Button } from "@/components/ui/button";
+import { Button } from "./ui/button";
 import { CreditCard, User, LogOut, Home, Layout } from "lucide-react";
 import { Link } from "react-router-dom";
 
