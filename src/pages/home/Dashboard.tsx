@@ -15,18 +15,14 @@ import {
   datePickersCustomizations,
   treeViewCustomizations,
 } from '../../theme/customizations';
+import { Link } from 'react-router-dom';
+import MainGrid from '../../components/home/MainGrid';
 
 const xThemeComponents = {
   ...chartsCustomizations,
   ...datePickersCustomizations,
   ...treeViewCustomizations,
 };
-import MainGrid from '../../components/home/MainGrid';
-
-<Link to="/home/payment">
-  <Button className="mt-4">Go to Payment Page</Button>
-</Link>
-
 
 export default function Dashboard(props: { disableCustomTheme?: boolean }) {
   const [isSideMenuOpen, setIsSideMenuOpen] = React.useState(() => {
