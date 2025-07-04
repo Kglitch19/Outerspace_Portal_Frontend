@@ -23,6 +23,11 @@ const xThemeComponents = {
 };
 import MainGrid from '../../components/home/MainGrid';
 
+<Link to="/home/payment">
+  <Button className="mt-4">Go to Payment Page</Button>
+</Link>
+
+
 export default function Dashboard(props: { disableCustomTheme?: boolean }) {
   const [isSideMenuOpen, setIsSideMenuOpen] = React.useState(() => {
     const savedState = localStorage.getItem('sideMenuOpen');

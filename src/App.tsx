@@ -10,8 +10,12 @@ import { AuthProvider } from './Authentication/AuthProvider'
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 
 import MyRequests from './pages/requests/MyRequests'
-
 import NewRequest from "./pages/NewRequest";
+import { PayOuterspace } from './pages/payment/PayOuterspace';
+
+
+
+
 
 const router = createBrowserRouter([
   {
@@ -41,7 +45,16 @@ const router = createBrowserRouter([
             <NewRequest />
           </ProtectedRoute>
         ),
+      },
+      {
+        path: '/home/payment',
+        element: (
+          <ProtectedRoute>
+            <PayOuterspace />
+          </ProtectedRoute>
+        ),
       }
+      
     ],
   },
   {
