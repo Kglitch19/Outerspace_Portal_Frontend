@@ -1,4 +1,34 @@
-import { Button } from "./ui/button";
+import { Link } from "react-router-dom";
+import { LayoutDashboard, FilePlus, BadgeDollarSign } from "lucide-react";
+
+const Header = () => {
+  return (
+    <header className="w-full bg-white shadow-sm border-b">
+      <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+        <h1 className="text-2xl font-bold text-black">Outerspace</h1>
+        <nav className="flex gap-6 items-center text-gray-600 text-sm font-medium">
+          <Link to="/home/dashboard" className="hover:text-black flex items-center gap-2">
+            <LayoutDashboard size={16} />
+            Dashboard
+          </Link>
+          <Link to="/home/new-request" className="hover:text-black flex items-center gap-2">
+            <FilePlus size={16} />
+            New Request
+          </Link>
+          <Link to="/home/payment" className="hover:text-black flex items-center gap-2">
+            <BadgeDollarSign size={16} />
+            Pay
+          </Link>
+        </nav>
+      </div>
+    </header>
+  );
+};
+
+export default Header;
+
+
+/*import { Button } from "./ui/button";
 import { CreditCard, User, LogOut, Home, Layout } from "lucide-react";
 import { Link } from "react-router-dom";
 
@@ -57,3 +87,4 @@ const Header = () => {
 };
 
 export default Header;
+*/

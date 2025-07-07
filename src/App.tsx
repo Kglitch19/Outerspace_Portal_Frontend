@@ -10,10 +10,11 @@ import { AuthProvider } from './Authentication/AuthProvider'
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 
 import MyRequests from './pages/requests/MyRequests'
-import NewRequest from "./pages/NewRequest";
+import NewRequest from './pages/NewRequest';
 import  PayOuterspace  from './pages/payment/PayOuterspace';
-
-
+import RequestSummary from './pages/RequestSummary'; 
+import DesignerDashboard from './pages/DesignerDashboard';
+import Index from './pages/Index'; 
 
 
 
@@ -57,6 +58,26 @@ const router = createBrowserRouter([
       
     ],
   },
+  {
+    path: '/home/request-summary',
+    element: (
+      <ProtectedRoute>
+        <RequestSummary />
+      </ProtectedRoute>
+    ),
+  },
+  {
+    path: "/home/designer-dashboard",
+    element: (
+      <ProtectedRoute>
+        <DesignerDashboard />
+      </ProtectedRoute>
+    ),
+  },
+  {
+    index: true, 
+    element: <Index />
+  },  
   {
     path: '/',
     element: <SignInPage />,

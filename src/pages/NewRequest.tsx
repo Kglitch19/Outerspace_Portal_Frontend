@@ -36,7 +36,7 @@ const NewRequest = () => {
     
     setTimeout(() => {
       setIsLoading(false);
-      alert("Your design request has been submitted successfully. We'll review it and get back to you with a quote.");
+      window.location.href = "/home/request-summary";
     }, 1000);
   };
 
